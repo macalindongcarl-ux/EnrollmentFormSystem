@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace EnrollmentFormSystem
 {
-    public partial class MainForm : Form
+    public partial class UserManagementForm : Form
     {
-        public MainForm()
+        public UserManagementForm()
         {
             InitializeComponent();
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
