@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace EnrollmentFormSystem
@@ -15,8 +16,12 @@ namespace EnrollmentFormSystem
             txtPassword.PasswordChar = '*';
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+
+
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
+
             if (string.IsNullOrWhiteSpace(txtUsername.Text) ||
               string.IsNullOrWhiteSpace(txtPassword.Text))
             {
@@ -93,10 +98,6 @@ namespace EnrollmentFormSystem
             }
         }
 
-        private void btLogin_Click(object sender, EventArgs e)
-        {
-
-        }
     }
-        }
-            
+
+}

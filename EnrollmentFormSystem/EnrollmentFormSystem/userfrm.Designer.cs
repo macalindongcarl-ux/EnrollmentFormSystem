@@ -1,6 +1,6 @@
 ﻿namespace EnrollmentFormSystem
 {
-    partial class frmdashboard
+    partial class userfrm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // frmdashboard
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(81, 174);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "User";
+            // 
+            // userfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frmdashboard";
-            this.Text = "Dashboard";
-            this.Load += new System.EventHandler(this.frmdashboard_Load);
+            this.ClientSize = new System.Drawing.Size(1406, 658);
+            this.Controls.Add(this.label1);
+            this.Name = "userfrm";
+            this.Text = "userfrm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

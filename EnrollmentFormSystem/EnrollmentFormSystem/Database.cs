@@ -11,7 +11,7 @@ namespace EnrollmentFormSystem
     {
         private static readonly string connectionString =
             @"Data Source=(localdb)\MSSQLLocalDB;
-              Initial Catalog=SchoolEnrollmentDB;
+              Initial Catalog=Enrollmentformsystem;
               Integrated Security=True;
               TrustServerCertificate=True;";
 

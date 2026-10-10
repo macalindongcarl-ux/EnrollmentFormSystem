@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace EnrollmentFormSystem
 {
-    public partial class frmdashboard : Form
+    public partial class Payments : Form
     {
-        public frmdashboard()
+        public Payments()
         {
             InitializeComponent();
-        }
-
-        private void frmdashboard_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
