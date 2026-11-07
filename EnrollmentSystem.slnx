@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="BusinessLogic/BusinessLogic.csproj" />
+  <Project Path="DB/DB.sqlproj" Id="0f2c3706-93c0-450e-a8e3-bdb12606a903">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="Model/Model.csproj" />
+  <Project Path="UI/UI.csproj" Id="349c41cc-961b-411a-ac3a-c2ca353754ef" />
+</Solution>
