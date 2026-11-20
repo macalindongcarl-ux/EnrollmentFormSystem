@@ -8,10 +8,12 @@ BEGIN
     SELECT 
         [UserID],
         [Username],
-        [IsAdmin]
+        [Role],
+        [IsActive]
     FROM 
         [dbo].[Users]
     WHERE 
         [Username] = @Username 
-        AND [Password] = @Password;
+        AND [Password] = @Password
+        AND [IsActive] = 1;
 END
