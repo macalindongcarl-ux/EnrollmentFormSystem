@@ -59,12 +59,55 @@
     <Folder Include="Table" />
     <Folder Include="StoredProcedures" />
     <Folder Include="Scripts" />
+    <Folder Include="StoredProcedures\Students" />
+    <Folder Include="StoredProcedures\Enrollment" />
+    <Folder Include="StoredProcedures\Assessment" />
+    <Folder Include="StoredProcedures\Payment" />
+    <Folder Include="StoredProcedures\GradeLevel" />
+    <Folder Include="StoredProcedures\Section" />
+    <Folder Include="StoredProcedures\User" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Table\tblUsers.sql" />
-    <Build Include="StoredProcedures\sp_AuthenticateUser.sql" />
+    <Build Include="Table\tblGradeLevels.sql" />
+    <Build Include="Table\tblSections.sql" />
+    <Build Include="Table\tblStudents.sql" />
+    <Build Include="StoredProcedures\Students\sp_GetAllStudents.sql" />
+    <Build Include="StoredProcedures\Students\sp_AddStudent.sql" />
+    <Build Include="StoredProcedures\Students\sp_UpdateStudent.sql" />
+    <Build Include="StoredProcedures\Students\sp_DeactivateStudent.sql" />
+    <Build Include="Table\tblEnrollments.sql" />
+    <Build Include="StoredProcedures\Enrollment\sp_GetAllEnrollments.sql" />
+    <Build Include="StoredProcedures\Enrollment\sp_GetSectionsByGradeAndSY.sql" />
+    <Build Include="StoredProcedures\Enrollment\sp_AddEnrollment.sql" />
+    <Build Include="StoredProcedures\Enrollment\sp_UpdateEnrollment.sql" />
+    <Build Include="StoredProcedures\Enrollment\sp_DeactivateEnrollment.sql" />
+    <Build Include="Table\tblAssessments.sql" />
+    <Build Include="StoredProcedures\Assessment\sp_GetAllAssessments.sql" />
+    <Build Include="StoredProcedures\Assessment\sp_GetEnrolledStudentsForAssessment.sql" />
+    <Build Include="StoredProcedures\Assessment\sp_AddAssessment.sql" />
+    <Build Include="StoredProcedures\Assessment\sp_UpdateAssessment.sql" />
+    <Build Include="StoredProcedures\Assessment\sp_DeactivateAssessment.sql" />
+    <Build Include="Table\tblPayments.sql" />
+    <Build Include="StoredProcedures\Payment\sp_GetAssessedAccountsForPayment.sql" />
+    <Build Include="StoredProcedures\Payment\sp_GetAllPayments.sql" />
+    <Build Include="StoredProcedures\Payment\sp_AddPayment.sql" />
+    <Build Include="StoredProcedures\Payment\sp_DeactivatePayment.sql" />
+    <Build Include="StoredProcedures\GradeLevel\sp_AddGradeLevel.sql" />
+    <Build Include="StoredProcedures\GradeLevel\sp_DeactivateGradeLevel.sql" />
+    <Build Include="StoredProcedures\GradeLevel\sp_UpdateGradeLevel.sql" />
+    <Build Include="StoredProcedures\GradeLevel\sp_GetAllGradeLevels.sql" />
+    <Build Include="StoredProcedures\Section\sp_AddSection.sql" />
+    <Build Include="StoredProcedures\Section\sp_DeactivateSection.sql" />
+    <Build Include="StoredProcedures\Section\sp_GetAllSections.sql" />
+    <Build Include="StoredProcedures\Section\sp_UpdateSection.sql" />
+    <Build Include="StoredProcedures\User\sp_AuthenticateUser.sql" />
+    <Build Include="StoredProcedures\User\sp_GetAllUsers.sql" />
+    <Build Include="StoredProcedures\User\usp_AddUser.sql" />
+    <Build Include="StoredProcedures\User\sp_UpdateUser.sql" />
+    <Build Include="StoredProcedures\User\sp_DeactivateUser.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\Script.PostDeployment.sql" />
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>
