@@ -91,29 +91,29 @@ namespace UI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text; 
+            string password = txtPassword.Text;
+
             UserModel user = _userController.Login(username, password, out string errorMsg);
 
             if (user != null)
             {
-                MessageBox.Show($"Welcome back, {user.Username}!", "Login Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(
+                    $"Welcome back, {user.Username} ({user.Role})!",
+                    "Login Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
 
-                if (user.IsAdmin)
-                {
-                    MainForm mainForm = new MainForm(user);
-                    mainForm.Show();
-                }
-                else
-                {
-                    MainForm mainForm = new MainForm(user);
-                    mainForm.Show();
-                }
-
-                this.Hide(); 
+                MainForm mainForm = new MainForm(user);
+                mainForm.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show(errorMsg, "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    errorMsg,
+                    "Access Denied",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 

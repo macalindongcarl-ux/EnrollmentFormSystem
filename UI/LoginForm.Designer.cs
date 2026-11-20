@@ -38,7 +38,6 @@
             btnExit = new Button();
             btnClear = new Button();
             btnLogin = new Button();
-            chkIsAdmin = new CheckBox();
             picEyeIcon = new PictureBox();
             pictureBox3 = new PictureBox();
             txtPassword = new TextBox();
@@ -117,7 +116,6 @@
             panel2.Controls.Add(btnExit);
             panel2.Controls.Add(btnClear);
             panel2.Controls.Add(btnLogin);
-            panel2.Controls.Add(chkIsAdmin);
             panel2.Controls.Add(picEyeIcon);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(txtPassword);
@@ -184,18 +182,6 @@
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
-            // 
-            // chkIsAdmin
-            // 
-            chkIsAdmin.AutoSize = true;
-            chkIsAdmin.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            chkIsAdmin.ForeColor = Color.FromArgb(128, 128, 255);
-            chkIsAdmin.Location = new Point(55, 383);
-            chkIsAdmin.Name = "chkIsAdmin";
-            chkIsAdmin.Size = new Size(196, 29);
-            chkIsAdmin.TabIndex = 10;
-            chkIsAdmin.Text = "Are you an Admin?";
-            chkIsAdmin.UseVisualStyleBackColor = true;
             // 
             // picEyeIcon
             // 
@@ -315,7 +301,6 @@
         private TextBox txtPassword;
         private PictureBox pictureBox2;
         private PictureBox picEyeIcon;
-        private CheckBox chkIsAdmin;
         private Button btnLogin;
         private Button btnExit;
         private Button btnClear;
