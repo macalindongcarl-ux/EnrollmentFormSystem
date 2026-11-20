@@ -10,14 +10,14 @@ namespace BusinessLogic.Repository
     {
         public List<AssessedAccountModel> GetAssessedAccounts()
         {
-            var list = new List<AssessedAccountModel>();
+            var list = new List<AssessedAccountModel>(); 
 
             using SqlConnection conn = new SqlConnection(DatabaseConfig.ConnectionString);
             using SqlCommand cmd = new SqlCommand("sp_GetAssessedAccountsForPayment", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandType = CommandType.StoredProcedure; 
 
             conn.Open();
-            using SqlDataReader reader = cmd.ExecuteReader();
+            using SqlDataReader reader = cmd.ExecuteReader(); 
             while (reader.Read())
             {
                 list.Add(new AssessedAccountModel

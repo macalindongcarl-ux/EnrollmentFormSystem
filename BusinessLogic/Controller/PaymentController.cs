@@ -11,46 +11,46 @@ namespace BusinessLogic.Controller
 
         public PaymentController()
         {
-            _paymentRepo = new PaymentRepository();
+            _paymentRepo = new PaymentRepository(); 
         }
 
         public List<AssessedAccountModel> GetAssessedAccounts()
         {
-            return _paymentRepo.GetAssessedAccounts();
+            return _paymentRepo.GetAssessedAccounts(); 
         }
 
         public List<PaymentModel> GetAll(bool includeInactive, string searchTerm = null)
         {
-            return _paymentRepo.GetAll(includeInactive, searchTerm);
+            return _paymentRepo.GetAll(includeInactive, searchTerm); 
         }
 
         public bool ProcessPayment(PaymentModel payment, decimal currentRemainingBalance, out string receiptNumber, out string errorMessage)
         {
-            receiptNumber = string.Empty;
-            errorMessage = string.Empty;
+            receiptNumber = string.Empty; 
+            errorMessage = string.Empty;  
 
-            if (payment == null || payment.AssessmentID <= 0)
+            if (payment == null || payment.AssessmentID <= 0) 
             {
-                errorMessage = "Please select an assessed student account.";
+                errorMessage = "Please select an assessed student account."; 
                 return false;
             }
 
-            if (payment.AmountPaid <= 0)
+            if (payment.AmountPaid <= 0) 
             {
                 errorMessage = "Payment amount must be greater than 0.00.";
-                return false;
+                return false; 
             }
 
             if (payment.AmountPaid > currentRemainingBalance)
             {
                 errorMessage = $"Payment amount (₱{payment.AmountPaid:N2}) cannot exceed the remaining balance (₱{currentRemainingBalance:N2}).";
-                return false;
+                return false; 
             }
 
             if (string.IsNullOrWhiteSpace(payment.PaymentMethod))
             {
                 errorMessage = "Please select a payment method.";
-                return false;
+                return false; 
             }
 
             if (!payment.PaymentMethod.Equals("Cash", StringComparison.OrdinalIgnoreCase) &&

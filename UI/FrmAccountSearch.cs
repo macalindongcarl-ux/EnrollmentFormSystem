@@ -10,7 +10,7 @@ namespace UI
 {
     public partial class FrmAccountSearch : Form
     {
-        private readonly UserModel _currentUser;
+        private readonly UserModel _currentUser; 
         private readonly PaymentController _paymentController;
         private List<AssessedAccountModel> _allAccounts = new List<AssessedAccountModel>();
         private bool _isInitializing = true;

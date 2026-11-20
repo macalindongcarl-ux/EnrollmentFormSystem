@@ -9,8 +9,8 @@ namespace Model
         public int StudentID { get; set; }
         public string StudentNumber { get; set; }
         public string StudentName { get; set; }
-        public string GradeLevelName { get; set; }
-        public string SectionName { get; set; }
+        public string GradeLevelName { get; set; } 
+        public string SectionName { get; set; } 
         public string SchoolYear { get; set; }
         public decimal TuitionFee { get; set; }
         public decimal MiscellaneousFee { get; set; }
